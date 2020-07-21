@@ -49,7 +49,7 @@ module Fastlane
 								end
 							}
 
-							return nil
+							return "not found"
 						end
 					end
 
@@ -67,13 +67,13 @@ module Fastlane
 								end
 							}
 
-							return nil
+							return "not found"
 						end
 
 					end
 				}
 
-				return nil
+				return "no projects"
 			end
 
 			def self.description
