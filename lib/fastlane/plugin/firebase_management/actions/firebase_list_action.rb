@@ -41,11 +41,11 @@ module Fastlane
 							UI.message "  iOS"
 							# UI.message bundle_id
 							ios_apps.sort {|left, right| left["appId"] <=> right["appId"] }.each_with_index { |app, j|
-								bundle_id_array.push(app["packageName"])
+								bundle_id_array.push(app["bundleId"])
 								app_id_array.push(app["appId"])
 					
-								if type == "ios" && bundle_id == app["packageName"] then
-									return Hash[app["packageName"], app["appId"]]
+								if type == "ios" && bundle_id == app["bundleId"] then
+									return Hash[app["bundleId"], app["appId"]]
 								end
 							}
 
